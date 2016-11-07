@@ -1,12 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import {ITest} from '../interfaces/itest';
 import {ITestPreview} from '../interfaces/itest-preview';
 
-
-
 @Injectable()
-export class TestServiceService {
+export class TestService {
 
   public getAllTests():ITest[] {
     return this._tests;
@@ -148,5 +146,3 @@ export class TestServiceService {
       }
     ];
 }
-
-

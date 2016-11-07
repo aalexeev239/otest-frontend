@@ -1,0 +1,8 @@
+<p>
+  {{question.question}}
+</p>
+
+<ul>
+  <li *ngFor="let a of question.answers; let i = index;" (click)="nextClick(i)">{{a.answer_img_url}}</li>
+</ul>
+

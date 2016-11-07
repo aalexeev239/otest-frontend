@@ -1,3 +1,34 @@
-<p>
-  test works!
-</p>
+<h1>{{test.title}}</h1>
+<div *ngIf="!isRunning && !isOver">
+  <p>{{test.full_desc}}</p>
+  <button
+    type="button"
+    (click)="startTest()">
+    Начать тест
+  </button>
+
+</div>
+<div *ngIf="isRunning">
+
+  <otest-question [question]="currentQuestion" (next)="getNextQuestion($event)"></otest-question>
+
+  <button
+    type="button"
+    (click)="finishTest()">
+    Закончить тест
+  </button>
+
+
+</div>
+
+<div *ngIf="isOver">
+  Тест завершён.
+  <button
+    type="button"
+    (click)="startTest()">
+    Ещё полразика
+  </button>
+</div>
+
+
+
