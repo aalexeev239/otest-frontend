@@ -10,6 +10,8 @@
 </div>
 <div *ngIf="isRunning">
 
+  <p>Вопрос {{questionsCursor + 1}} из {{questionsLength}}</p>
+
   <otest-question [question]="currentQuestion" (next)="getNextQuestion($event)"></otest-question>
 
   <button
@@ -22,7 +24,12 @@
 </div>
 
 <div *ngIf="isOver">
-  Тест завершён.
+  Тест завершён. Вы набрали {{questionsLength - result}} из {{questionsLength}}.
+
+  <p>Ошибки</p>
+
+  <otest-question-result *ngFor="let q of wrongQuestions" [question]="q"></otest-question-result>
+
   <button
     type="button"
     (click)="startTest()">

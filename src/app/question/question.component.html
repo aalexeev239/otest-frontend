@@ -1,8 +1,12 @@
+<img [src]="question.question_img_url" alt="Вопрос {{question.id}}">
+
 <p>
   {{question.question}}
 </p>
 
 <ul>
-  <li *ngFor="let a of question.answers; let i = index;" (click)="nextClick(i)">{{a.answer_img_url}}</li>
+  <li *ngFor="let a of question.answers; let i = index;" (click)="nextClick(i)">
+    <img [src]="a.answer_img_url" [alt]="i">
+  </li>
 </ul>
 
