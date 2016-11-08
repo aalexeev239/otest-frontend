@@ -7,7 +7,7 @@ import {IQuestion} from '../shared/interfaces/iquestion';
 @Component({
   selector: 'otest-test',
   templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  styleUrls: ['test.component.less']
 })
 export class TestComponent implements OnInit {
 

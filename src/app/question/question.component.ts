@@ -6,7 +6,7 @@ import {IQuestion} from '../shared/interfaces/iquestion';
 @Component({
   selector: 'otest-question',
   templateUrl: './question.component.html',
-  styleUrls: ['./question.component.css']
+  styleUrls: ['question.component.less']
 })
 export class QuestionComponent {
 
