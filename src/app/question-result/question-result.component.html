@@ -1,0 +1,9 @@
+Вопрос {{question.id}}:
+<br>
+{{question.question}}
+<br>
+Ваш ответ:
+<img [src]="question.answers[question.user_answer].answer_img_url" alt="">
+<br>
+Правильный ответ:
+<img [src]="question.answers[question.correct_answer].answer_img_url" alt="">
