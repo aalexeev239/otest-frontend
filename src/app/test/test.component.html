@@ -1,3 +1,46 @@
-<p>
-  test works!
-</p>
+<div class="block-header">
+  <h2 *ngIf="isRunning">Вопрос {{questionsCursor + 1}} из {{questionsLength}}</h2>
+  <h2 *ngIf="!isRunning">{{test.title}}</h2>
+</div>
+<div class="card">
+  <div class="card-body card-padding" *ngIf="!isRunning && !isOver">
+    <p>{{test.full_desc}}</p>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="startTest()">
+      Начать тест
+    </button>
+  </div>
+
+  <div class="card-body card-padding" *ngIf="isRunning">
+    <otest-question [question]="currentQuestion" (next)="getNextQuestion($event)"></otest-question>
+  </div>
+
+  <div class="card-header" *ngIf="isOver">
+    <h2>Тест завершён.</h2>
+  </div>
+  <div class="card-body card-padding" *ngIf="isOver">
+
+    <div class="alert alert-success h5 m-b-25" role="alert" *ngIf="questionsLength !== result">
+      Поздравляем! Ваш результат — {{questionsLength - result}} из {{questionsLength}}.
+    </div>
+
+    <div class="alert alert-danger h5 m-b-25" role="alert" *ngIf="questionsLength === result">
+      Отвратительно! Ни одного правильного ответа.
+    </div>
+
+    <p class="h4" *ngIf="wrongQuestions.length">Ошибки:</p>
+
+    <otest-question-result *ngFor="let q of wrongQuestions" [question]="q"></otest-question-result>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="startTest()">
+      Ещё полразика
+    </button>
+  </div>
+
+
+</div>
