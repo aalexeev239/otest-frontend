@@ -20,7 +20,7 @@ export class TestService {
   }
 
   private _previews: ITestPreview[] = [{
-    title: 'Тест на знание условных знаков',
+    title: 'Условные знаки',
     short_desc: 'Проверьте свои силы, знакомы ли вы со всеми условными знаками?',
     preview_img_url: 'assets/tests/test_01/que002_1000.jpg'
   }];
@@ -28,7 +28,7 @@ export class TestService {
   private _tests: ITest[] =
     [
       {
-        title: 'Тест на знание условных знаков',
+        title: 'Условные знаки',
         short_desc: 'Проверьте свои силы, знакомы ли вы со всеми условными знаками?',
         full_desc: `В вопросах нужно подобрать правильный условный знак к объекту, 
         изображенному на фотографии. Вам будут предложены четыре варианты ответа, 
@@ -46,17 +46,17 @@ export class TestService {
           correct_answer: 0
         },
           {
-          id: 2,
-          question: 'Как выглядит железная дорога на карте?',
-          question_img_url: 'assets/tests/test_01/que002_1000.jpg',
-          answers: [
-            {answer_img_url: 'assets/tests/znaki/515.png'},
-            {answer_img_url: 'assets/tests/znaki/521.png'},
-            {answer_img_url: 'assets/tests/znaki/533.png'},
-            {answer_img_url: 'assets/tests/znaki/534.png'}
-          ],
-          correct_answer: 0
-        }
+            id: 2,
+            question: 'Как выглядит железная дорога на карте?',
+            question_img_url: 'assets/tests/test_01/que002_1000.jpg',
+            answers: [
+              {answer_img_url: 'assets/tests/znaki/515.png'},
+              {answer_img_url: 'assets/tests/znaki/521.png'},
+              {answer_img_url: 'assets/tests/znaki/533.png'},
+              {answer_img_url: 'assets/tests/znaki/534.png'}
+            ],
+            correct_answer: 0
+          }
           , {
             id: 3,
             question: 'Как выглядит поляна на карте?'

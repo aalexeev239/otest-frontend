@@ -9,7 +9,12 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<div style="font-size: 100px;">Компонента теста</div>
-<app-root>Loading...</app-root>
+<app-root>
+  <div class="preloader preloader-centered pl-xxl">
+    <svg class="pl-circular" viewBox="25 25 50 50" width="100">
+      <circle class="plc-path" cx="50" cy="50" r="20"></circle>
+    </svg>
+  </div>
+</app-root>
 </body>
 </html>

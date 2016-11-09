@@ -1,9 +1,21 @@
-Вопрос {{question.id}}:
-<br>
-{{question.question}}
-<br>
-Ваш ответ:
-<img [src]="question.answers[question.user_answer].answer_img_url" alt="">
-<br>
-Правильный ответ:
-<img [src]="question.answers[question.correct_answer].answer_img_url" alt="">
+<div class="wrap">
+  <p class="f-700 m-b-5">
+    Вопрос {{question.id}}: {{question.question}}
+  </p>
+
+  <div class="thumbnail-wrap">
+    <p>Ваш ответ:</p>
+    <div class="thumbnail thumbnail-disabled">
+      <img [src]="question.answers[question.user_answer].answer_img_url" alt="">
+    </div>
+  </div>
+
+  <div class="thumbnail-wrap">
+    <p>Правильный ответ:</p>
+    <div class="thumbnail thumbnail-disabled">
+      <img [src]="question.answers[question.correct_answer].answer_img_url" alt="">
+    </div>
+  </div>
+
+</div>
+
